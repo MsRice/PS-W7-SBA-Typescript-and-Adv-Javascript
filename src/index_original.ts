@@ -1,11 +1,11 @@
-// import { Product } from './models/Product.ts'
-// import { apiResponse } from './services/apiService.ts'
+// import { Product } from './models/Product'
+// import { apiResponse } from './services/apiService'
 
 // // Here is the original assignment solution 
 
 // const productResponse: Product | null  =  await apiResponse()
 // const productList: Product[] = productResponse?.products 
-
+// console.log(productList)
 
 
 

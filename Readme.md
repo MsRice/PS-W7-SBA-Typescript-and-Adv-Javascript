@@ -51,7 +51,13 @@ Write a reflection of roughly 300 words addressing:
  I implemented TypeScript and OOP principles in a clear, straightforward way, using classes, interfaces, and strong typing to keep the structure organized. The project was smooth, and I didn’t encounter major challenges. Asynchronous operations were handled with simple async/await patterns, keeping the logic readable and predictable. For errors, I used basic try/catch blocks and practical checks to prevent issues before they occurred. Overall, the project was easy to build, and it strengthened my understanding of TypeScript, OOP design, and asynchronous programming.
 
  Stretch goal: add a UI to visualize data and interactions.
+ Update(11/23/25) : Added basic UI 
+  - would add load more functionality
 
+
+Note for Grading: 
+  - lines 24-26 are for duplicate from index.ts for html
+  - and index.ts is commented out
 
 ## Author
 

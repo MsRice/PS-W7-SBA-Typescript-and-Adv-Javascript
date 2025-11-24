@@ -1,21 +1,41 @@
 export class Product {
-    sku;
-    name;
+    id;
+    title;
+    description;
+    category;
     price;
+    discountPercentage;
+    rating;
+    stock;
+    sku;
+    availabilityStatus;
+    reviews;
+    images;
+    thumbnail;
     salesTax;
-    discount;
-    constructor(sku, name, price, salesTax = .07, discount) {
-        this.sku = sku;
-        this.name = name;
+    constructor(id, title, description, category, price, discountPercentage, rating, stock, sku, availabilityStatus, reviews, images, thumbnail, salesTax = .07) {
+        this.id = id;
+        this.title = title;
         this.price = price;
         this.salesTax = salesTax;
-        this.discount = discount;
+        this.description = description;
+        this.category = category;
+        this.price = price;
+        this.discountPercentage = discountPercentage;
+        this.rating = rating;
+        this.stock = stock;
+        this.sku = sku;
+        this.availabilityStatus = availabilityStatus;
+        this.reviews = reviews;
+        this.images = images;
+        this.thumbnail = thumbnail;
+        this.salesTax = salesTax;
     }
     diplayDetails() {
-        return `${this.name}(sku:${this.sku}) , product price is, ${this.price}.`;
+        return `${this.title}(id:${this.id}) , product price is, ${this.price}.`;
     }
     getPriceWithDiscount() {
-        return this.price - (this.price * this.discount);
+        return this.price - (this.price * this.discountPercentage);
     }
 }
 //# sourceMappingURL=Product.js.map

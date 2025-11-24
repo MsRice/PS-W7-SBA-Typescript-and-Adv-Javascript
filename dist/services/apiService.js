@@ -1,10 +1,10 @@
-import { DataError } from "../utils/errorHandler";
-import { SuperCustomError } from "../utils/errorHandler";
-(async () => {
+// import { DataError } from "../utils/errorHandler.ts";
+// import { SuperCustomError } from "../utils/errorHandler.ts";
+export async function apiResponse() {
     try {
-        const response = await fetch('https://dummyjson.com/produpcts');
-        const productList = await response.json();
-        // console.log(productList)
+        const response = await fetch('https://dummyjson.com/products');
+        let productList = await response.json();
+        productList = productList;
         return productList;
     }
     catch (error) {
@@ -12,11 +12,13 @@ import { SuperCustomError } from "../utils/errorHandler";
             console.error("Caught an Error object:", error.message);
         }
         else {
-            console.error("Caught an unknown error:", error);
-            throw new SuperCustomError("You pyscho, what did YOU DO???");
-            // throw new DataError("nnsns" , 783)
+            console.error(error);
+            // throw new SuperCustomError("You pyscho, what did YOU DO???")
         }
         return null;
     }
-})();
+}
+const productResponse = await apiResponse();
+const productList = productResponse?.products;
+export { productList };
 //# sourceMappingURL=apiService.js.map
